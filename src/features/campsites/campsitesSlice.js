@@ -1,12 +1,12 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 // import { CAMPSITES } from '../../app/shared/CAMPSITES';
 import { baseUrl } from '../../app/shared/baseUrl';
-import { mapImageURL } from '../../utils/mapImageUrl';
+import { mapImageURL } from '../../utils/mapImageURL';
 
 export const fetchCampsites = createAsyncThunk(
     'campsite/fetchCampsites',
     async () => {
-        const response = await fetch(baseUrl + 'camspites');
+        const response = await fetch(baseUrl + 'campsites');
         if (!response.ok) {
             return Promise.reject('Unable to fetch, status: ' + response.status)
         }

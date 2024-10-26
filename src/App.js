@@ -19,6 +19,7 @@ function App() {
     useEffect(() => {
         dispatch(fetchCampsites());
     },  [dispatch]);
+    
     return (
         <div className='App'>
             <Header />
